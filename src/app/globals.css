@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 200 33% 97%;
+    --foreground: 207 20% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 207 20% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 207 20% 10%;
+    --primary: 207 88% 52%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 176 54% 59%;
+    --secondary-foreground: 207 20% 10%;
+    --muted: 200 20% 90%;
+    --muted-foreground: 207 10% 40%;
+    --accent: 176 54% 59%;
+    --accent-foreground: 207 20% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 200 20% 88%;
+    --input: 200 20% 88%;
+    --ring: 207 88% 52%;
+    --chart-1: 207 88% 52%;
+    --chart-2: 176 54% 59%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.75rem;
+  }
+  .dark {
+    --background: 207 40% 10%;
+    --foreground: 210 40% 98%;
+    --card: 207 40% 12%;
+    --card-foreground: 210 40% 98%;
+    --popover: 207 40% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 207 88% 52%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 176 40% 30%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 207 30% 20%;
+    --muted-foreground: 207 20% 65%;
+    --accent: 176 40% 30%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 207 30% 20%;
+    --input: 207 30% 20%;
+    --ring: 207 88% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+}
+
+.chat-bubble-user {
+  @apply bg-primary text-primary-foreground rounded-2xl rounded-tr-none px-4 py-2 shadow-sm;
+}
+
+.chat-bubble-bot {
+  @apply bg-white border border-border text-foreground rounded-2xl rounded-tl-none px-4 py-2 shadow-sm;
+}
+
+.typing-dot {
+  @apply h-1.5 w-1.5 bg-primary/40 rounded-full inline-block animate-bounce;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}

@@ -1,0 +1,10 @@
+{
+  "placeholderImages": [
+    {
+      "id": "app-logo",
+      "description": "MindMeld AI Chatbot Logo",
+      "imageUrl": "https://picsum.photos/seed/mindmeld/200/200",
+      "imageHint": "AI Brain Logo"
+    }
+  ]
+}
